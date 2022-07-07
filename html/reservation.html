@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/decoration.css">
+    <script src="../js/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="top_color"></div>
+
+    <div>
+        <p class="icon">
+            <a href="../top.html">
+            <img src="../image/icon.png" alt="アイコン" width="150" height="50">
+            </a>
+        </p>
+    </div>
+
+    <span class="nav_toggle">
+        <i></i>
+        <i></i>
+        <i></i>
+    </span>
+    <nav class="nav">
+        <ul class="nav_menu_ul">
+            <li class="nav_menu_li"><a href="../top.html">TOP</a></li>
+            <li class="nav_menu_li"><a href="#">ABOUT</a></li>
+            <li class="nav_menu_li"><a href="#">BLOG</a></li>
+            <li class="nav_menu_li"><a href="#">NEWS</a></li>
+            <li class="nav_menu_li"><a href="#">MY ALBUM</a></li>
+            <li class="nav_menu_li"><a href="./karte.html">KARTE</a></li>
+            <li class="nav_menu_li"><a href="#">NEWS</a></li>
+            <li class="nav_menu_li"><a href="./reservation.html">予約</a></li>
+            <li class="nav_menu_li"><a href="#">個人情報変更</a></li>
+            <li class="nav_menu_li"><a href="#">来店履歴</a></li>
+        </ul>
+    </nav>
+
+    <span class="reservation">
+    <p><font size="6">受付予約</font></p>
+
+    <form name="form1">
+    <fieldset>
+    <legend><font size="4">スタッフ選択</font></legend>
+    <input type="radio" name="q1" value="東京工科"> 東京工科　
+    <br>
+    <input type="radio" name="q1" value="こうかとん"> こうかとん　
+    <br>
+    <input type="radio" name="q1" value="指名なし"> 指名なし
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+        <legend><font size="4">メニュー選択</font></legend>
+
+        <div>
+        <label><input type="checkbox" id="cut" name="cut" onclick="onButtonClick();"> カット</label>
+        <br>
+            <span id="cutmenu">　カットする大体の長さを指定してください:
+                <select name="cutlength" id="cutlength">
+                    <option value="none">指定しない</option>
+                    <option value="TipofHair">毛先だけ</option>
+                    <option value="under5cm">0cm~5cm</option>
+                    <option value="5cm~10cm">5cm~10cm</option>
+                    <option value="10cm~15cm">10cm~15cm</option>
+                    <option value="15cm~20cm">15cm~20cm</option>
+                    <option value="20cm~25cm">20cm~25cm</option>
+                    <option value="25cm~30cm">25cm~30cm</option>
+                    <option value="more30cm">30cm~</option>
+                </select>
+            </span>
+        </div>
+
+        <div>
+        <label><input type="checkbox" id="color" name="color" onclick="onButtonClick();"> カラー</label>
+        <br>
+        <span id="Brightness">　現在のご自身の髪の毛の明度となりたい明度を指定してください。
+            <br>
+            　現在の明度:
+            <select name="nowBrightness" id="nowBrightness">
+                <option value="noneBrightness">指定しない</option>
+                <option value="Brightness1">明度1</option>
+                <option value="Brightness2">明度2</option>
+                <option value="Brightness3">明度3</option>
+                <option value="Brightness4">明度4</option>
+                <option value="Brightness5">明度5</option>
+                <option value="Brightness6">明度6</option>
+                <option value="Brightness7">明度7</option>
+                <option value="Brightness8">明度8</option>
+                <option value="Brightness9">明度9</option>
+                <option value="Brightness10">明度10</option>
+                <option value="Brightness11">明度11</option>
+                <option value="Brightness12">明度12</option>
+                <option value="Brightness13">明度13</option>
+                <option value="Brightness14">明度14</option>
+                <option value="Brightness15">明度15</option>
+                <option value="Brightness16">明度16</option>
+                <option value="Brightness17">明度17</option>
+                <option value="Brightness18">明度18</option>
+                <option value="Brightness19">明度19</option>
+                <option value="Brightness20">明度20</option>
+            </select>
+            　なりたい明度:
+            <select name="willBrightness" id="willBrightness">
+                <option value="noneBrightness">指定しない</option>
+                <option value="Brightness1">明度1</option>
+                <option value="Brightness2">明度2</option>
+                <option value="Brightness3">明度3</option>
+                <option value="Brightness4">明度4</option>
+                <option value="Brightness5">明度5</option>
+                <option value="Brightness6">明度6</option>
+                <option value="Brightness7">明度7</option>
+                <option value="Brightness8">明度8</option>
+                <option value="Brightness9">明度9</option>
+                <option value="Brightness10">明度10</option>
+                <option value="Brightness11">明度11</option>
+                <option value="Brightness12">明度12</option>
+                <option value="Brightness13">明度13</option>
+                <option value="Brightness14">明度14</option>
+                <option value="Brightness15">明度15</option>
+                <option value="Brightness16">明度16</option>
+                <option value="Brightness17">明度17</option>
+                <option value="Brightness18">明度18</option>
+                <option value="Brightness19">明度19</option>
+                <option value="Brightness20">明度20</option>
+            </select>
+        </span>
+        </div>
+
+        <div>
+        <input type="checkbox" id="perm" name="perm">
+        <label for="perm">パーマ</label>
+        </div>
+
+        <div>
+        <input type="checkbox" id="hairstraightening" name="hairstraightening">
+        <label for="hairstraightening">縮毛矯正</label>
+        </div>
+        
+        <div>
+        <input type="checkbox" id="extension" name="extension">
+        <label for="extension">エクステ</label>
+        </div>
+
+        <div>
+        <input type="checkbox" id="treatment" name="treatment">
+        <label for="treatment">トリートメント</label>
+        </div>
+
+        <div>
+        <input type="checkbox" id="hairset" name="hairset">
+        <label for="hairset">ヘアセット</label>
+        </div>
+
+        <div>
+        <input type="checkbox" id="headspa" name="headspa">
+        <label for="headspa">ヘッドスパ</label>
+        </div>
+
+        <div>
+        <input type="checkbox" id="dressing" name="dressing">
+        <label for="dressing">着付け</label>
+        </div>
+
+        <div>
+        <input type="checkbox" id="hairstraightening" name="hairstraightening">
+        <label for="hairstraightening">縮毛矯正</label>
+        </div>
+
+        <div>
+        <label><input type="checkbox" name="others" value="on"
+            onclick="connecttext('textforothers',this.checked);">その他</label>:
+        <input type="text" name="othertext" id="textforothers" value="">
+        
+        </div>
+
+    </fieldset>
+
+    <br>
+
+        <fieldset>
+            <legend><font size="4">日時選択</font></legend>
+            <div>
+                <label for="date">日付</label>
+                <input type="date" name="Date_reservation" id="date" required>
+            </div>
+            <div>
+                <label for="time">時刻</label>
+                <input type="time" name="Time_reservation" id="time" required>
+            </div>
+        </fieldset>
+
+    <button type="submit" onclick="location.href='./completion.html'"><font size="4">受付予約</font></button>
+    </form>
+    </span>
+
+    <script src="../js/movement.js"></script>
+    <script type="text/javascript" src="../js/only_jQuery.js"></script>
+</body>
+</html>
